@@ -37,12 +37,12 @@ export default function Blog() {
         </p>
       </div>
       <div className="row my-10">
-        <div className="flex items-center gap-3 border-b border-[#333] pb-5">
+        <div className="flex flex-wrap items-center gap-3 border-b border-[#333] pb-5">
           <button
             className={`ml-3 h-9.5 px-4 rounded-xl border text-[13px] font-medium transition-all ${
               category === ""
                 ? "bg-[#ff5a00] border-[#ff5a00] text-white"
-                : "bg-[#222] border-[777] text-[#777] hover:text-white"
+                : "bg-[#222] border-[#777] text-[#777] hover:text-white"
             }`}
             onClick={() => {
               setCategory("");
@@ -56,7 +56,7 @@ export default function Blog() {
             className={`h-9.5 px-4 rounded-xl border text-[13px] font-medium transition-all ${
               category === "إضاءة"
                 ? "bg-[#ff5a00] border-[#ff5a00] text-white"
-                : "bg-[#222] border-[777] text-[#777] hover:text-white"
+                : "bg-[#222] border-[#777] text-[#777] hover:text-white"
             }`}
             onClick={() => {
               setCategory("إضاءة");
@@ -70,7 +70,7 @@ export default function Blog() {
             className={`h-9.5 px-4 rounded-xl border text-[13px] font-medium transition-all ${
               category === "بورتريه"
                 ? "bg-[#ff5a00] border-[#ff5a00] text-white"
-                : "bg-[#222] border-[777] text-[#777] hover:text-white"
+                : "bg-[#222] border-[#777] text-[#777] hover:text-white"
             }`}
             onClick={() => {
               setCategory("بورتريه");
@@ -84,7 +84,7 @@ export default function Blog() {
             className={`h-9.5 px-4 rounded-xl border text-[13px] font-medium transition-all ${
               category === "مناظر طبيعية"
                 ? "bg-[#ff5a00] border-[#ff5a00] text-white"
-                : "bg-[#222] border-[777] text-[#777] hover:text-white"
+                : "bg-[#222] border-[#777] text-[#777] hover:text-white"
             }`}
             onClick={() => {
               setCategory("مناظر طبيعية");
@@ -98,7 +98,7 @@ export default function Blog() {
             className={`h-9.5 px-4 rounded-xl border text-[13px] font-medium transition-all ${
               category === "تقنيات"
                 ? "bg-[#ff5a00] border-[#ff5a00] text-white"
-                : "bg-[#222] border-[777] text-[#777] hover:text-white"
+                : "bg-[#222] border-[#777] text-[#777] hover:text-white"
             }`}
             onClick={() => {
               setCategory("تقنيات");
@@ -111,7 +111,7 @@ export default function Blog() {
             className={`h-9.5 px-4 rounded-xl border text-[13px] font-medium transition-all  ${
               category === "معدات"
                 ? "bg-[#ff5a00] border-[#ff5a00] text-white"
-                : "bg-[#222] border-[777] text-[#777] hover:text-white"
+                : "bg-[#222] border-[#777] text-[#777] hover:text-white"
             }`}
             onClick={() => {
               setCategory("معدات");
@@ -120,7 +120,7 @@ export default function Blog() {
           >
             معدات
           </button>
-          <div className="flex w-full justify-end mr-2">
+          <div className="flex flex-1 min-w-62.5 justify-end mr-2">
             <div className="relative w-full max-w-md">
               <input
                 type="text"
@@ -178,7 +178,7 @@ export default function Blog() {
             ))}
           </div>
         )}
-        <div className="flex justify-center a gap-3 py-8 -mb-14">
+        <div className="flex justify-center gap-3 py-8 -mb-14">
           {Array.from(
             { length: Math.ceil(filteredPosts.length / postsPerPage) },
             (num, index) => (
